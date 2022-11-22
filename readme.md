@@ -1,4 +1,4 @@
-=== Content-list ===
+# Content-list
 Contributors: Facyla, forked from webvitaly page-list 5.2
 Donate link: http://web-profile.net/donate/
 Tags: page, page-list, pagelist, sitemap, subpages, siblings
@@ -10,7 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl.html
 
 [pagelist], [subpages], [siblings] and [pagelist_ext] shortcodes
 
-== Description ==
+## Description
 
 This forks aims at providing more selection options, and support for other post types, especillay for posts and products.
 
@@ -20,23 +20,23 @@ This forks aims at providing more selection options, and support for other post 
 * **[Donate](http://web-profile.net/donate/ "Support the development")**
 * **[GitHub](https://github.com/webvitalii/page-list "Fork")**
 
-= shortcodes: =
+### shortcodes 
 
 * **[pagelist]** - hierarchical tree of all pages on site (useful to show sitemap of the site);
 * **[subpages]** - hierarchical tree of subpages to the current page;
 * **[siblings]** - hierarchical tree of sibling pages to the current page;
 * **[pagelist_ext]** - list of pages with featured image and with excerpt;
 
-= examples with aditional parameters: =
+### examples with aditional parameters
 
 * `[pagelist child_of="4" depth="2" exclude="6,7,8"]`
 * `[pagelist_ext child_of="4" exclude="6,7,8" image_width="50" image_height="50"]`
 * **[all Page-list params](http://wordpress.org/plugins/page-list/other_notes/ "Page-list params")**
 
 
-== Other Notes ==
+## Other Notes
 
-= Parameters for [pagelist], [subpages] and [siblings]: =
+### Parameters for [pagelist], [subpages] and [siblings]
 * **[pagelist]** - list of all pages as the hierarchical list;
 * **[subpages]** - list of subpages to the current page as the hierarchical list; Same as: `[pagelist child_of="current"]`;
 * **[siblings]** - list of sibling pages to the current page as the hierarchical list; Same as: `[pagelist child_of="parent"]`;
@@ -64,7 +64,7 @@ This forks aims at providing more selection options, and support for other post 
 More [info about params](http://codex.wordpress.org/Function_Reference/wp_list_pages#Parameters) for [pagelist], [subpages], [siblings].
 
 
-= Parameters for [pagelist_ext]: =
+### Parameters for [pagelist_ext]
 * **[pagelist_ext]** - by default shows list of subpages to current page; but if there is no subpages than all pages will be shown;
 * **show_image** - show or hide featured image `[pagelist_ext show_image="0"]`; "show_image" have higher priority than "show_first_image"; by default: show_image="1";
 * **show_first_image** - show or hide first image from content if there is no featured image `[pagelist_ext show_first_image="1"]`; by default: show_first_image="0";
@@ -100,157 +100,156 @@ More [info about params](http://codex.wordpress.org/Function_Reference/wp_list_p
 More [info about params](http://codex.wordpress.org/Function_Reference/get_pages#Parameters) for [pagelist_ext].
 
 
-== Frequently Asked Questions ==
+## Frequently Asked Questions
 
-= How to show the list of posts? =
-
+### How to show the list of posts?
 To show list of posts you can use [List Category Posts](http://wordpress.org/plugins/list-category-posts/) plugin.
 
-= On what functions shortcodes are based? =
-
+### On what functions shortcodes are based?
 Shortcodes [pagelist], [subpages], [siblings] are based on [wp_list_pages()](http://codex.wordpress.org/Template_Tags/wp_list_pages) function.
 Shortcode [pagelist_ext] is based on [get_pages()](http://codex.wordpress.org/Function_Reference/get_pages) function.
 
-= What is the difference between [pagelist], [subpages] and [siblings]? =
-
+### What is the difference between [pagelist], [subpages] and [siblings]?
 Shortcodes [pagelist], [subpages] and [siblings] accept the same parameters. The only difference is that [subpages] and [siblings] not accept `child_of` parameter, because [subpages] shows subpages to the current page and [siblings] shows subpages to the parent page.
 
-= How to create sitemap.xml? =
+
+### How to create sitemap.xml?
 To create sitemap.xml you can use [Google XML Sitemaps](http://wordpress.org/plugins/google-sitemap-generator/) plugin.
 
-= Is there "more-link" feature in the plugin? =
+### Is there "more-link" feature in the plugin?
 No, there is no "more-link" feature in the plugin. Because "[more-link](http://web-profile.net/web/web-principles/more-link/ "do not use more-link")":
 
 * **bad for SEO.** Nobody will search your site with the word "more". "rel=nofollow" will not solve it too.
 * **bad for usability.** There is already link on title and "more-link" is an extra no needed element on page. If user cannot understand that the title is the link, than there is a problem in css styles and not in plugin's templates.
 
-= What to do if you need to change the plugin's code? =
+### What to do if you need to change the plugin's code?
 When you changed the plugin's code you should also change the plugin's version to '100' (for example) to avoid updates, which could override and delete your code.
 
-== Screenshots ==
+## Screenshots
 
 1. [pagelist] shortcode
 2. [pagelist_ext] shortcode
 
-== Changelog ==
+## Changelog
 
-= 5.2 =
+### 5.2
 * added normalize params function to include and exclude_tree params (thanks to https://github.com/MrSwed )
 * execute shortcodes in meta tags (thanks to https://github.com/MrSwed )
 
-= 5.1 =
+### 5.1
 * added columns feature
 
-= 5.0 =
+### 5.0
 * code refactoring
 * update docs
 * added 'authors', 'post_type', 'post_status', 'date_format' params to [pagelist], [subpages], [siblings] shortcodes (thanks to Nick Ciske)
 
-= 4.3 =
+### 4.3
 * use wp_enqueue_scripts hook instead of wp_print_styles to enqueue scripts and styles (thanks to sireneweb)
 
-= 4.2 =
+### 4.2
 * fix in css styles (clearfix added to .page-list-ext)
 * make default image size 150x150 like default thumbnail size
 
-= 4.1 =
+### 4.1
 * change the type of output the image thumbnail in [pagelist_ext] shortcode
 
-= 4.0 =
+### 4.0
 * remove conflict between Pagelist and Sitemap plugins
 * remove preg_match_all notice
 * minor changes
 
-= 3.8 =
+### 3.8
 * fixed default [pagelist_ext] behaviour - showing all pages if there is no subpages
 
-= 3.7 =
+### 3.7
 * executing shortcodes in [pagelist_ext  strip_shortcodes="0"] in content
 
-= 3.6 =
+### 3.6
 * fixing bug with shortcode in sidebar - shortcode in comment start to execute
 
-= 3.5 =
+### 3.5
 * showing all pages for [pagelist_ext child_of="0"] shortcode
 
-= 3.4 =
+### 3.4
 * remove esc_attr() from title in [pagelist_ext] shortcode
 
-= 3.3 =
+### 3.3
 * rename "get_first_image" function to "page_list_get_first_image" for avoiding conflicts
 
-= 3.2 =
+### 3.2
 * fixed bug with "more_tag" and non english chars
 
-= 3.1 =
+### 3.1
 * fixed bug with empty image in "show_first_image" parameter
 * added "more_tag" higher priority than "limit_content" (thanks to BobyDimitrov)
 
-= 3.0 =
+### 3.0
 * added "show_first_image" parameter for showing first image from content if there is no featured image
 
-= 2.9 =
+### 2.9
 * added "more_tag" parameter and more tag support
 * hiding password protected content of the pages
 
-= 2.8 =
+### 2.8
 * added "strip_shortcodes" parameter
 
-= 2.7 =
+### 2.7
 * make excerpt link if there is no title
 
-= 2.6 =
+### 2.6
 * fixed [pagelist_ext] "parent" parameter
 
-= 2.5 =
+### 2.5
 * adding spaces between lines when tags are stripped in [pagelist_ext]
 
-= 2.4 =
+### 2.4
 * escaping attributes in title in [pagelist_ext]
 
-= 2.3 =
+### 2.3
 * fixed [pagelist_ext] with showing excerpt of the page if it is not empty, else showing content
 
-= 2.2 =
+### 2.2
 * fixed offset parameter
 
-= 2.1 =
+### 2.1
 * fixed number parameter
 
-= 2.0 =
+### 2.0
 * fixed crash bug with [pagelist_ext] if theme does not have thumbnail feature
 
-= 1.9 =
+### 1.9
 * added show_child_count parameter
 * added show_meta_key parameter
 
-= 1.8 =
+### 1.8
 * added screenshots
 * improved parameter parsing
 
-= 1.7 =
+### 1.7
 * added strip_tags parameter
 
-= 1.6 =
+### 1.6
 * improved [pagelist_ext] shortcode: added content to list, added toggle show and limit content parameters
 
-= 1.5 =
+### 1.5
 * added [pagelist_ext] shortcode - list of pages with featured image
 
-= 1.4 =
+### 1.4
 * added exclude="current" parameter
 
-= 1.3.0 =
+### 1.3.0
 * added class to ul elements by default
 * added "class" option (thanks to Arvind)
 
-= 1.2.0 =
+### 1.2.0
 * added [subpages] and [siblings] shortcodes
 
-= 1.0.0 =
+### 1.0.0
 * initial release
 
-== Installation ==
+
+## Installation
 
 1. install and activate the plugin on the Plugins page
 2. add shortcodes to pages: `[pagelist]`, `[subpages]`, `[siblings]`, `[pagelist_ext]`
