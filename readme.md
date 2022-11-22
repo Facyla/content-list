@@ -1,5 +1,5 @@
-=== Page-list ===
-Contributors: webvitaly
+=== Content-list ===
+Contributors: Facyla, forked from webvitaly page-list 5.2
 Donate link: http://web-profile.net/donate/
 Tags: page, page-list, pagelist, sitemap, subpages, siblings
 Requires at least: 3.0
@@ -12,9 +12,11 @@ License URI: http://www.gnu.org/licenses/gpl.html
 
 == Description ==
 
-* **[Advanced iFrame Pro](https://1.envato.market/KdRNz "Advanced iFrame Pro")**
-* **[Page-list](http://web-profile.net/wordpress/plugins/page-list/ "Plugin page")**
-* **[all Page-list params](http://wordpress.org/plugins/page-list/other_notes/ "Page-list params")**
+This forks aims at providing more selection options, and support for other post types, especillay for posts and products.
+
+
+* **[Page-list](http://web-profile.net/wordpress/plugins/content-list/ "Plugin page")**
+* **[all Page-list params](http://wordpress.org/plugins/content-list/other_notes/ "Page-list params")**
 * **[Donate](http://web-profile.net/donate/ "Support the development")**
 * **[GitHub](https://github.com/webvitalii/page-list "Fork")**
 
@@ -61,6 +63,7 @@ License URI: http://www.gnu.org/licenses/gpl.html
 
 More [info about params](http://codex.wordpress.org/Function_Reference/wp_list_pages#Parameters) for [pagelist], [subpages], [siblings].
 
+
 = Parameters for [pagelist_ext]: =
 * **[pagelist_ext]** - by default shows list of subpages to current page; but if there is no subpages than all pages will be shown;
 * **show_image** - show or hide featured image `[pagelist_ext show_image="0"]`; "show_image" have higher priority than "show_first_image"; by default: show_image="1";
@@ -95,6 +98,7 @@ More [info about params](http://codex.wordpress.org/Function_Reference/wp_list_p
 * columns - for splitting list of pages into columns: `[pagelist_ext class="page-list-cols-2"]`; available classes: page-list-cols-2, page-list-cols-3, page-list-cols-4, page-list-cols-5; works in all modern browsers and IE10+;  columns are responsive and become 1 column at less than 768px;
 
 More [info about params](http://codex.wordpress.org/Function_Reference/get_pages#Parameters) for [pagelist_ext].
+
 
 == Frequently Asked Questions ==
 
@@ -250,3 +254,4 @@ When you changed the plugin's code you should also change the plugin's version t
 
 1. install and activate the plugin on the Plugins page
 2. add shortcodes to pages: `[pagelist]`, `[subpages]`, `[siblings]`, `[pagelist_ext]`
+
